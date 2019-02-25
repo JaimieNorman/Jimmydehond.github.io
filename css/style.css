@@ -330,6 +330,7 @@ body {
     top: 50%;
     left: 50%;
     width: 90%;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center; }
   .card__details-box {
@@ -352,24 +353,29 @@ body {
     text-decoration: none;
     padding: 3px;
     font-size: 1.6rem;
+    -webkit-transition: all .2s;
     transition: all .2s; }
   .card__link:active {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    -webkit-transform: translateY(-1px);
     transform: translateY(-1px); }
   .card__link-1:hover {
     background-color: #ff7730;
     color: white;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    -webkit-transform: translateY(-3px);
     transform: translateY(-3px); }
   .card__link-2:hover {
     background-color: #5643fa;
     color: white;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    -webkit-transform: translateY(-3px);
     transform: translateY(-3px); }
   .card__link-3:hover {
     background-color: #55c57a;
     color: white;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    -webkit-transform: translateY(-3px);
     transform: translateY(-3px); }
 
 .popup {
