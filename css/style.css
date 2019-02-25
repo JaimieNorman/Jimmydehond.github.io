@@ -247,11 +247,13 @@ body {
   height: 50rem; }
   .card__face {
     height: 50rem;
+    -webkit-transition: all 1s ease;
     transition: all 1s ease;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 3px;
     overflow: hidden;
@@ -259,6 +261,7 @@ body {
     .card__face-front {
       background-color: #ffff; }
     .card__face-back {
+      -webkit-transform: rotateY(180deg);
       transform: rotateY(180deg); }
       .card__face-back-1 {
         background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
@@ -267,8 +270,10 @@ body {
       .card__face-back-3 {
         background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
   .card:hover .card__face-front {
+    -webkit-transform: rotateY(-180deg);
     transform: rotateY(-180deg); }
   .card:hover .card__face-back {
+    -webkit-transform: rotateY(0);
     transform: rotateY(0); }
   .card__image {
     background-size: cover;
