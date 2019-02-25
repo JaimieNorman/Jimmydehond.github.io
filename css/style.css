@@ -241,14 +241,14 @@ body {
       margin-bottom: 3rem; } }
 
 .card {
-  -webkit-perspective: 150rem;
+  -webkit-perspective: 1500;
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
   height: 50rem; }
   .card__face {
     height: 50rem;
-    -webkit-transition: -webkit-transform all 1s ease;
+    -webkit-transition: all 1s ease;
     transition: all 1s ease;
     position: absolute;
     top: 0;
@@ -354,7 +354,7 @@ body {
     text-decoration: none;
     padding: 3px;
     font-size: 1.6rem;
-    -webkit-transition: -webkit-transform all .2s;
+    -webkit-transition: all .2s;
     transition: all .2s; }
   .card__link:active {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
