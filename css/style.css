@@ -248,7 +248,9 @@ body {
   height: 50rem; }
   .card__face {
     height: 50rem;
-    -webkit-transition: all 1s ease;
+    -webkit-transition-property: all;
+    -webkit-transition-delay: 1s;
+    -webkit-transition-timing-function: ease;
     transition: all 1s ease;
     position: absolute;
     top: 0;
@@ -354,7 +356,9 @@ body {
     text-decoration: none;
     padding: 3px;
     font-size: 1.6rem;
-    -webkit-transition: all .2s;
+    -webkit-transition-property: all;
+    -webkit-transition-delay: .2s;
+    -webkit-transition-timing-function: ease;
     transition: all .2s; }
   .card__link:active {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
