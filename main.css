@@ -1,0 +1,178 @@
+/* Author - Jaimie Norman
+   Portfolio Project
+*/
+/*
+    Author - Jaimie Norman
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Changes box model so that borders and paddings are no longer added to the total width or total heighth */ }
+
+body {
+  box-sizing: border-box; }
+
+@keyframes moveFromLeft {
+  0% {
+    /* This is when the animation starts */
+    opacity: 0;
+    transform: translateX(-100px); }
+  80% {
+    transform: translateX(20px); }
+  100% {
+    /* This is when the animation ends */
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px); }
+  80% {
+    transform: translateX(-20px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+body {
+  font-family: "Lato", sans-serif;
+  /* Use Lato; if it isnt available, default to sans-serif */
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  /* 1.7 times bigger than the predefined line height */
+  color: #777;
+  padding: 30px; }
+
+.secondary-heading {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  display: inline-block;
+  -webkit-background-clip: text;
+  color: transparent; }
+
+.tertiary-heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin: 3rem; }
+
+.center-text {
+  text-align: center; }
+
+.margin-bottom-gap {
+  margin-bottom: 8rem; }
+
+.about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -20vh; }
+
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all .2s;
+  position: relative; }
+
+.btn-white {
+  background-color: #ffff;
+  color: #777; }
+  .btn-white::after {
+    background-color: #ffff; }
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scale(1.5);
+    opacity: 0; }
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); }
+
+.btn::after {
+  content: "";
+  /* Have to specify the content and display properties for the element to actually appear */
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /* Pushing the virtual element behind the original button */
+  transition: all 0.4s;
+  /* Adds the smooth animation effect */ }
+
+.btn-animated {
+  animation: moveFromBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards; }
+
+.header {
+  position: relative;
+  height: 95vh;
+  /* 95% of the viewport height */
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top; }
+  .header-heading-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Shift it 50% of the elements height and width */
+    text-align: center; }
+  .header-heading-primary {
+    color: #ffff;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    /* This is to fix the 'shakiness' of the animation */
+    margin-bottom: 60px; }
+    .header-heading-primary-main {
+      display: block;
+      /* block elements occupy the entire width that they have available and they create line breaks after and before them */
+      font-size: 50px;
+      font-weight: 400;
+      letter-spacing: 5px;
+      animation: moveFromLeft 1s; }
+    .header-heading-primary-after {
+      display: block;
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 10px;
+      animation: moveFromRight 1s; }
+
+.row {
+  max-width: 114rem;
+  background-color: #eee;
+  margin: 0 auto; }
+
+/* .logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}s
+
+.logo {
+    height: 100px;
+} */
