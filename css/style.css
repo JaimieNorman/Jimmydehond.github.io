@@ -241,7 +241,7 @@ body {
       margin-bottom: 3rem; } }
 
 .card {
-  -webkit-perspective: 1500;
+  -webkit-perspective: 1500px;
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
